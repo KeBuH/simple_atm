@@ -34,9 +34,7 @@ public class ATM {
                     .sorted((k1, k2) ->
                             Integer.compare(
                                     k2.getKey().getValue(), k1.getKey().getValue()))
-                    .forEach(v -> {
-                        this.processing(v.getKey(), total, result);
-                    });
+                    .forEach(v -> this.processing(v.getKey(), total, result));
             return result;
         } else throw new RuntimeException("Sorry! Not enough amount!");
     }
